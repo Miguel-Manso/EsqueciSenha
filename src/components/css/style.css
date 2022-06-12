@@ -53,6 +53,7 @@
   label{
     color: #405c60;
     position: relative;
+    display: block
   }
   
   /**** advanced input styling ****/
@@ -108,12 +109,12 @@
   }
   
   /*marcando os links para mudar de um formulário para outro */
-  .link{
+  .link.link1 {
     position: absolute;
     background: #e1eaeb;
     color: #7f7c7c;
     left: 0px;
-    height: 20px;
+    height: 60px;
     width: 440px;
     padding: 17px 30px 20px 30px;
     font-size: 16px;
@@ -135,7 +136,7 @@
     border-radius: 4px;  
   
     -webkit-transition: all 0.4s linear;
-    transition: all 0.4s  linear;
+    transition: all 0.6s  linear;
   }
   .link a:hover {
     color: #39bfd7;
@@ -144,7 +145,8 @@
   }
   
   /* estilos para para ambos os formulários */
-  #cadastro, 
+  #cadastro,
+  #recuperar,
   #login{
     position: absolute;
     top: 0px;
@@ -157,24 +159,27 @@
    
     border-radius: 5px;
     
-    -webkit-animation-duration: 0.5s;
+    -webkit-animation-duration: 0.7s;
     -webkit-animation-timing-function: ease;
     -webkit-animation-fill-mode: both;
   
-    animation-duration: 0.5s;
+    animation-duration: 0.7s;
     animation-timing-function: ease;
     animation-fill-mode: both;
-  }
-  
+    
+
+        }
+  #pararecuperar:target ~ .content #recuperar,
   #paracadastro:target ~ .content #cadastro,
   #paralogin:target ~ .content #login{
-    z-index: 2;
+    z-index: 3;
     -webkit-animation-name: fadeInLeft;
     animation-name: fadeInLeft;
   
     -webkit-animation-delay: .1s;
     animation-delay: .1s;
   }
+  #pararecuperar:target ~ .content #recuperar,
   #registro:target ~ .content #login,
   #paralogin:target ~ .content #cadastro{
     -webkit-animation-name: fadeOutLeft;
